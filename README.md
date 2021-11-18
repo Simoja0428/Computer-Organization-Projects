@@ -13,3 +13,6 @@ This project, written in C++, makes use of SIMD instructions and loop unrolling 
 
 ## memcpy()
 This project demonstrates just how much really goes on behind the scenes when we are writing our code. In C++ or another higher-level language memcpy() seems like such a simple function to implement. The idea that we are copying something from one variable to another seems simple, however doing it in an efficent manor can be challlenging. The following program, written in AARCH64, demonstrates this by implementing an incredibly efficent version of memcpy() by copying things from one variable to another (down to the bit). This project makes use of a jump table to help us copy down to the bit our values.
+
+## Concurrency Spit Game
+The purpose of this project is to use C++ threading along with mutexes, while avoiding concurrency issues, to implement a game of Spit. Basically, a vector of numbers is randomized and split up into multiple vectors. Each thread (player) is then assigned a hand of cards (a vector). The program launches all of the threads, if the thread has the number in its vector then it locks the mutex and prints. Otherwise, the thread yields to another thread until we find the one that has it. An understanding of this project demonstrates a basic understanding of C++ threading and mutexes. 
