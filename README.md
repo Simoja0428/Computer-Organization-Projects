@@ -16,3 +16,7 @@ This project demonstrates just how much really goes on behind the scenes when we
 
 ## Concurrency Spit Game
 The purpose of this project is to use C++ threading along with mutexes, while avoiding concurrency issues, to implement a game of Spit. Basically, a vector of numbers is randomized and split up into multiple vectors. Each thread (player) is then assigned a hand of cards (a vector). The program launches all of the threads, if the thread has the number in its vector then it locks the mutex and prints. Otherwise, the thread yields to another thread until we find the one that has it. An understanding of this project demonstrates a basic understanding of C++ threading and mutexes. 
+
+## Dining Philosophers
+This project implemented two different solutions to a very famous problem. Each solution, makes use of two mutexes that are shared amongst the 5 threads. One solution, makes use of try_locks to avoid deadlocking, the other solution simply attempts a different order, managing to also not deadlock. An understanding of this project demonstrates an understanding of how to manage multiple mutex locks while working with C++ threading. This project also makes use of getopt to run the program.   
+
